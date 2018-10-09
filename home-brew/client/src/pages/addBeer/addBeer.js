@@ -15,18 +15,18 @@ class addBeers extends Component {
         return (
             <div>
                 <Navigation></Navigation>
-                <Form>
+                <Form className="col-4 mx-auto">
                     <FormGroup>
-                        <Label for="beerNameID">Beer Name: </Label>
-                        <Input type="text" name="beerName" id="beerNameID" placeholder="Bud Light" />
+                        <Label for="beerNameID">Beer Name</Label>
+                        <Input type="text" name="beerName" id="beerNameID" />
                     </FormGroup>
                     <FormGroup>
                         <Label for="beerStyleID">Beer Style</Label>
                         <Input type="select" name="select" id="beerStyleID">
-                            <option>Ale</option>
-                            <option>Lager</option>
-                            <option>Stouts and Porters</option>
-                            <option>Malts</option>
+                            <option>IPA</option>
+                            <option>Pilsner</option>
+                            <option>Stout</option>
+                            <option>Saison</option>
                         </Input>
                     </FormGroup>
                     <Button>Submit</Button>
