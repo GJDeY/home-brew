@@ -24,7 +24,7 @@ class App extends Component {
     this.getUser()
   }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
 
@@ -52,7 +52,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-   
+
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
@@ -72,8 +72,11 @@ class App extends Component {
         <Route
           path="/signup"
           render={() =>
-            <Signup/>}
+            <Signup />}
         />
+        <Route
+          path="/api/beerlist"
+          component={} />
 
       </div>
     );
