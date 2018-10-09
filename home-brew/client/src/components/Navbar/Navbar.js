@@ -16,6 +16,9 @@ class Navigation extends React.Component {
                     <NavbarBrand href="/">Home Brew 🍻</NavbarBrand>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
+                            <NavLink href="/profile">Profile</NavLink>
+                        </NavItem>
+                        <NavItem>
                             <NavLink href="/signup">Sign Up</NavLink>
                         </NavItem>
                         <NavItem>
