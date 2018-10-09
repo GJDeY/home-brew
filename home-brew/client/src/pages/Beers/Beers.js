@@ -6,7 +6,7 @@ import Banners from "../../components/Banners/Banners";
 import Login from "../Login/Login";
 import Cards from "../../components/Cards/Cards"
 
-class Beers extends Component {
+class Beers extends React.Component {
     state = {
         example: "some state!"
     };
@@ -14,9 +14,8 @@ class Beers extends Component {
     render() {
         return (
             <div>
-                <Navigation></Navigation>
-                <Banners></Banners>
-                <Cards></Cards>
+                <Navigation />
+                <Cards />
             </div>
         );
     }
