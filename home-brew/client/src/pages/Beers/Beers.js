@@ -14,12 +14,10 @@ class Beers extends Component {
     render() {
         return (
             <div>
-                <Navigation></Navigation>
-                <Banners></Banners>
-                <Cards></Cards>
+                <Navigation />
+                <Cards />
             </div>
         );
     }
 }
-
 export default Beers;

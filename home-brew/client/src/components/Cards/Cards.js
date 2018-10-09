@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 
 
-class Beers extends Component {
+class Cards extends React.Component {
     constructor() {
         super()
     }
