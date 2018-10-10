@@ -4,7 +4,7 @@ const db = require("../models");
 // This file empties the beers collection and inserts the beers below
 mongoose.connect(
     process.env.MONGODB_URI ||
-    "mongodb://localhost/home-brew"
+    "mongodb://localhost/homebrew"
 );
 
 const beerSeed = [
@@ -94,7 +94,7 @@ const beerSeed = [
     }
 ];
 
-db.home - brew
+db.homebrew
     .remove({})
     .then(() => db.beerName.collection.insertMany(beerSeed))
     .then(data => {
