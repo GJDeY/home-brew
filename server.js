@@ -18,6 +18,8 @@ app.use('/api', routes);
 
 // Connect to the Mongo DB
 //change to match your db name!
+// const db = require('./config/keys').mongoURI;
+
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/homebrew_db"
 );

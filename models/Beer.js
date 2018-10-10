@@ -13,4 +13,6 @@ const BeerSchema = new Schema({
     }
 });
 
+
+// comment
 module.exports = Beer = mongoose.model('beer', BeerSchema);
