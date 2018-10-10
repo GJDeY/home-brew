@@ -4,8 +4,7 @@
   "description": "home-brew",
   "main": "server.js",
   "engines": {
-    "node": "8.11.3",
-    "npm": "8.11.3"
+    "node": "8.11.3"
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
