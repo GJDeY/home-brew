@@ -94,9 +94,9 @@ const beerSeed = [
     }
 ];
 
-db.Book
+db.Beer
     .remove({})
-    .then(() => db.Book.collection.insertMany(bookSeed))
+    .then(() => db.Beer.collection.insertMany(beerSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
