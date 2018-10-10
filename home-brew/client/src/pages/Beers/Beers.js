@@ -5,6 +5,7 @@ import Navigation from "../../components/Navbar/Navbar";
 import Banners from "../../components/Banners/Banners";
 import Login from "../Login/Login";
 import Cards from "../../components/Cards/Cards";
+import { Button } from 'reactstrap';
 
 class Beers extends React.Component {
     state = {
