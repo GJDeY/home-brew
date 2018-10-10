@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const routes = require("./routes/api/beerAPI");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use(routes);
+app.use('/api', routes);
 
 // Connect to the Mongo DB
 //change to match your db name!
