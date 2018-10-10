@@ -13,7 +13,7 @@ class Navigation extends React.Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand href="/">Home Brew 🍻</NavbarBrand>
+                    <NavbarBrand href="/">homeBrew</NavbarBrand>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
                             <NavLink href="/profile">Profile</NavLink>

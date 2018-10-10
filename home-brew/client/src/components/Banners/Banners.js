@@ -9,19 +9,16 @@ import {
 
 const items = [
     {
-        src: 'https://via.placeholder.com/800x340',
-        altText: 'Slide 1',
-        caption: 'Slide 1'
+        src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMX_MfLTs3aPxfOYcae1iTz1zR2erBtpkHidrlvEhKX2uiTHYg',
+
     },
     {
-        src: 'https://via.placeholder.com/800x340',
-        altText: 'Slide 2',
-        caption: 'Slide 2'
+        src: 'https://cdn.static-economist.com/sites/default/files/images/2017/07/articles/main/20170708_wbp502.jpg',
+
     },
     {
-        src: 'https://via.placeholder.com/800x340',
-        altText: 'Slide 3',
-        caption: 'Slide 3'
+        src: 'https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2018%2F04%2Fnational-beer-day-ipa.jpg&w=1600&q=70',
+
     }
 ];
 
@@ -78,16 +75,18 @@ class Banners extends Component {
         });
 
         return (
-            <Carousel
-                activeIndex={activeIndex}
-                next={this.next}
-                previous={this.previous}
-            >
-                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-            </Carousel>
+            <div className="container" style={{}}>
+                <Carousel
+                    activeIndex={activeIndex}
+                    next={this.next}
+                    previous={this.previous}
+                >
+                    <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+                    {slides}
+                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                    <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                </Carousel>
+            </div>
         );
     }
 }

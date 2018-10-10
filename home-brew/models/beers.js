@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const db = require(".");
 
 // This file empties the beers collection and inserts the beers below
 mongoose.connect(
@@ -7,7 +7,7 @@ mongoose.connect(
     "mongodb://localhost/home-brew"
 );
 
-const beerSeed = [
+const beer = [
     {
         beerName: "Crimson IPA",
         brewer: "Matt Wilson",
@@ -94,7 +94,7 @@ const beerSeed = [
     }
 ];
 
-db.Book
+db.beer
     .remove({})
     .then(() => db.Book.collection.insertMany(bookSeed))
     .then(data => {
