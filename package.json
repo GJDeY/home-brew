@@ -1,6 +1,9 @@
 {
   "name": "skeleton_react",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
   "description": "home-brew",
   "main": "server.js",
   "scripts": {
