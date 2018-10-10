@@ -1,7 +1,7 @@
 {
   "name": "skeleton_react",
   "version": "1.0.0",
-  "description": "",
+  "description": "home-brew",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
