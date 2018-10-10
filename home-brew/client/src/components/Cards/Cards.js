@@ -99,7 +99,9 @@ class Cards extends React.Component {
                             </CardBody>
                         </div>
                     </Col>
-                    <Button className="mx-auto" style={{ margin: '30px' }} color="dark" href="/addBeer">Add A Beer!</Button>
+                    <Col>
+                        <Button md="12" className="mx-auto" color="dark" href="/addBeer" body>Add A Beer!</Button>
+                    </Col>
 
                 </Row>
             </div>
