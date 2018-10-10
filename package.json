@@ -1,10 +1,8 @@
 {
   "name": "skeleton_react",
   "version": "1.0.0",
-  "description": "home-brew",
-  "main": "server.js",
   "engines": {
-    "node": "8.11.3"
+    "node": "8.9.4"
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -27,6 +25,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "if-env": "^1.0.4",
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "react-scripts": "^2.0.4"
   }
 }
