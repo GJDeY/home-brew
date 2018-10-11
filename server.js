@@ -1,30 +1,51 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const routes = require("./routes/api/beerAPI");
-const app = express();
-const PORT = process.env.PORT || 3001;
+var express = require("express");
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+var app = express();
+var PORT = process.env.PORT || 8080;
 
-// Configure body parser for AJAX requests
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// Serve up static assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
-// Add routes, both API and view
-app.use('/api', routes);
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/home-brew";
+mongoose.connect(MONGODB_URI);
 
-// Connect to the Mongo DB
-//change to match your db name!
-// const db = require('./config/keys').mongoURI;
+var personModel = require('./models/Beer.js');
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/homebrew_db"
-);
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
-// Start the API server
-app.listen(PORT, () =>
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
-);
+
+app.post('/saveDude', function (req, res) {
+  const newBeer = new Beer({
+    name: req.body.name
+  });
+
+  newBeer.save().then(beer => res.json(beer));
+  // var cleanUpToSave = {
+  //   name: req.body.nameInput,
+  //   favColor: req.body.colorInput
+  // }
+  // console.log('this is the dude we are about to save!!', cleanUpToSave);
+  // personModel.create(cleanUpToSave).then(function (thingFromDb) {
+  //   console.log('this from DB!!', thingFromDb);
+  //   res.json(thingFromDb)
+  // })
+})
+
+app.get('/grabDude', function (req, res) {
+  personModel.find({}).then(function (peopleFromDb) {
+    res.json(peopleFromDb);
+  })
+})
+
+app.listen(PORT, function () {
+  console.log("App listening on PORT: " + PORT);
+});
