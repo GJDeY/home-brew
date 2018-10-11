@@ -6,4 +6,4 @@ client/node_modules
 
 node_modules
 
-keys.js
+.config/keys.js
