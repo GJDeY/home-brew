@@ -1,6 +1,7 @@
 {
   "name": "skeleton_react",
   "version": "1.0.0",
+  "main": "server.js",
   "engines": {
     "node": "8.9.4"
   },
