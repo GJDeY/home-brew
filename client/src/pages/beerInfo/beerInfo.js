@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import { Col, Row, Container } from "../../components/Grid";
 import Navigation from "../../components/Navbar/Navbar";
+import DisplayBeer from "../../components/DisplayBeer/DisplayBeer";
 import Banners from "../../components/Banners/Banners";
 import Login from "../Login/Login";
 import Cards from "../../components/Cards/Cards";
-import { Button, Col, Row } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class Beers extends React.Component {
     state = {
@@ -17,10 +19,7 @@ class Beers extends React.Component {
         return (
             <div>
                 <Navigation />
-                <Col>
-                    <Button md="12" className="mx-auto" color="dark" href="/addBeer" body>Add A Beer!</Button>
-                </Col>
-                <Cards />
+                <DisplayBeer />
             </div>
         );
     }
