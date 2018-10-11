@@ -15,7 +15,7 @@ class Cards extends React.Component {
                 <Row>
                     <Col md="4" className="flex-wrap" body>
                         <div style={{ margin: '30px' }}>
-                            <a href="http://www.google.com"><CardImg width="100%" className="rounded" src="https://www.gannett-cdn.com/-mm-/89934f7b13e7717eb560f3babda84f20895abcd0/c=83-0-724-482/local/-/media/2018/07/17/DetroitFreeP/DetroitFreePress/636674313628993565-GettyImages-684133728.jpg?width=534&height=401&fit=crop" alt="beer" /></a>
+                            <a href="/beerInfo"><CardImg width="100%" className="rounded" src="https://www.gannett-cdn.com/-mm-/89934f7b13e7717eb560f3babda84f20895abcd0/c=83-0-724-482/local/-/media/2018/07/17/DetroitFreeP/DetroitFreePress/636674313628993565-GettyImages-684133728.jpg?width=534&height=401&fit=crop" alt="beer" /></a>
                             <CardBody>
                                 <CardTitle>Card title</CardTitle>
                                 <CardSubtitle>Card subtitle</CardSubtitle>
@@ -95,9 +95,6 @@ class Cards extends React.Component {
 
                             </CardBody>
                         </div>
-                    </Col>
-                    <Col>
-                        <Button md="12" className="mx-auto" color="dark" href="/addBeer" body>Add A Beer!</Button>
                     </Col>
 
                 </Row>
