@@ -13,10 +13,10 @@ class Navigation extends React.Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand href="/">Home Brew 🍻</NavbarBrand>
+                    <NavbarBrand href="/">homeBrew</NavbarBrand>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/profile">Profile</NavLink>
+                            <NavLink href="/beers">Beers</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="/signup">Sign Up</NavLink>
@@ -25,7 +25,7 @@ class Navigation extends React.Component {
                             <NavLink href="/login">Login</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="/profile">Profile</NavLink>
                         </NavItem>
                     </Nav>
                 </Navbar>
