@@ -3,25 +3,9 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const BeerSchema = new Schema({
-    beerName: {
+    name: {
         type: String,
         required: true
-    },
-    brewer: {
-        type: String,
-        required: true
-    },
-    image: {
-        type: String,
-        required: true
-    },
-    beerNote: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        default: Date.now
     }
 });
 

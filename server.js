@@ -33,15 +33,7 @@ app.post('/saveDude', function (req, res) {
   });
 
   newBeer.save().then(beer => res.json(beer));
-  // var cleanUpToSave = {
-  //   name: req.body.nameInput,
-  //   favColor: req.body.colorInput
-  // }
-  // console.log('this is the dude we are about to save!!', cleanUpToSave);
-  // personModel.create(cleanUpToSave).then(function (thingFromDb) {
-  //   console.log('this from DB!!', thingFromDb);
-  //   res.json(thingFromDb)
-  // })
+
 })
 
 app.get('/grabDude', function (req, res) {
