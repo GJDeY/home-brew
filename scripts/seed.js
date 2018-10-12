@@ -9,18 +9,21 @@ mongoose.connect(
 
 const beerSeed = [
     {
-        beerName: "Crimson IPA",
-        brewer: "Matt Wilson",
+        beerName: "Luke",
+        brewer: "Crimson IPA",
         beerNote:
             "5.8% An American IPA with notes of cherry and cinnamon. Dark reddish-brown in color and perfect for fall festivities. This year, I used a mix of citra and mosiac hops. Can't wait for you all to try it out at our next event!",
-        date: new Date(Date.now())
+        style: "",
+        imageURL: "",
+        hbcAddress: ""
+
     },
     {
         beerName: "Grande Porter",
         brewer: "Alex Mitz",
         beerNote:
             "6.7% Porter. This porter will blow your mind! I'm super stoked about it, might be my best ever! I created it with fuggle and willamette hops.",
-        date: new Date(Date.now())
+
     },
     {
         beerName: "Whiny Wheat Mill",

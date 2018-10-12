@@ -3,17 +3,21 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const BeerSchema = new Schema({
-    name: {
+    beerName: {
+        type: String,
+        required: true
+    },
+    brewer: {
+        type: String,
+        required: true
+    },
+    beerNote: {
         type: String,
         required: true
     },
     style: {
         type: String,
         enum: ['IPA', 'Pilsner', 'Stout', 'Saison'],
-        required: true
-    },
-    beerNote: {
-        type: String,
         required: true
     },
     imageURL: {
