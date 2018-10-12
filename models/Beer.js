@@ -6,6 +6,11 @@ const BeerSchema = new Schema({
     name: {
         type: String,
         required: true
+    },
+    style: {
+        type: String,
+        enum: ['IPA', 'Pilsner', 'Stout', 'Saison'],
+        required: true
     }
 });
 

@@ -18,7 +18,8 @@ router.get('/', (req, res) => {
 // @access  Public
 router.post('/', (req, res) => {
     const newBeer = new Beer({
-        name: req.body.name
+        name: req.body.name,
+        style: req.body.style
     });
 
     newBeer.save().then(beer => res.json(beer));
