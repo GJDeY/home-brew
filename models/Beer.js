@@ -11,6 +11,14 @@ const BeerSchema = new Schema({
         type: String,
         enum: ['IPA', 'Pilsner', 'Stout', 'Saison'],
         required: true
+    },
+    beerNote: {
+        type: String,
+        required: true
+    },
+    imageURL: {
+        type: String,
+        required: true
     }
 });
 

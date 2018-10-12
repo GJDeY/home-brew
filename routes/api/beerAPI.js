@@ -19,7 +19,9 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const newBeer = new Beer({
         name: req.body.name,
-        style: req.body.style
+        style: req.body.style,
+        beerNote: req.body.beerNote,
+        imageURL: req.body.imageURL
     });
 
     newBeer.save().then(beer => res.json(beer));
