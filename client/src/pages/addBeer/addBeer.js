@@ -50,6 +50,10 @@ class CreateBeerForm extends Component {
                             <option value="Pilsner">Pilsner</option>
                             <option value="Stout">Stout</option>
                             <option value="Saison">Saison</option>
+                            <option value="Lager">Lager</option>
+                            <option value="Ale">Ale</option>
+                            <option value="Belgian">Belgian</option>
+                            <option value="Hefeweizen">Hefeweizen</option>
                         </select>
                     </FormGroup>
                     <Button onClick={this.handleFormSubmit}>Submit</Button>
