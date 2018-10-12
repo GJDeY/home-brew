@@ -11,7 +11,7 @@ export default {
     return axios.post("/api/beers", beer);
   },
   getBeers: () => {
-    return axios.post("/api/beers");
+    return axios.get("/api/beers");
   },
   deleteBeer: id => {
     return axios.delete("/api/beers" + id)
