@@ -21,7 +21,8 @@ router.post('/', (req, res) => {
         name: req.body.name,
         style: req.body.style,
         beerNote: req.body.beerNote,
-        imageURL: req.body.imageURL
+        imageURL: req.body.imageURL,
+        hbcAddress: req.body.hbcAddress
     });
 
     newBeer.save().then(beer => res.json(beer));

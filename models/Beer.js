@@ -19,6 +19,10 @@ const BeerSchema = new Schema({
     imageURL: {
         type: String,
         required: true
+    },
+    hbcAddress: {
+        type: String,
+        required: true
     }
 });
 
