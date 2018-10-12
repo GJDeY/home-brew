@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const exampleRoutes = require("./examples");
+const beerRoutes = require("./beerApi");
 
-router.use("/examples", exampleRoutes);
+router.use("/beers", beerRoutes);
 
 module.exports = router;

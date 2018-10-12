@@ -6,10 +6,32 @@ import Banners from "../../components/Banners/Banners";
 import Login from "../Login/Login";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-class addBeers extends Component {
+class CreateBeerForm extends Component {
     state = {
-        example: "some state!"
-    };
+        beerName: "",
+        beerStyle: "IPA"
+    }
+
+
+    handleInputChange = (event) => {
+        this.setState({ [event.target.name]: event.target.value })
+    }
+
+    handleFormSubmit = (event) => {
+        event.preventDefault();
+
+        API.createBeer({ name: this.state.beerName, style: this.state.beerStyle })
+            .then(result => {
+                console.log(result)
+            }).catch(error => {
+                console.log(error)
+            })
+        this.setState({
+            beerName: "",
+            beerStyle: "IPA"
+        })
+
+    }
 
     render() {
         return (
@@ -18,22 +40,24 @@ class addBeers extends Component {
                 <Form className="col-4 mx-auto">
                     <FormGroup>
                         <Label for="beerNameID">Beer Name</Label>
-                        <Input type="text" name="beerName" id="beerNameID" />
+                        {/* type="text" name="beerName" id="beerNameID"  */}
+                        <Input type="text" name="beerName" value={this.state.beerName} id="beerNameID" onChange={this.handleInputChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="beerStyleID">Beer Style</Label>
-                        <Input type="select" name="select" id="beerStyleID">
-                            <option>IPA</option>
-                            <option>Pilsner</option>
-                            <option>Stout</option>
-                            <option>Saison</option>
-                        </Input>
+                        <select type="select" value={this.state.beerStyle} name="beerStyle" id="beerStyleID" onChange={this.handleInputChange}>
+                            <option value="IPA">IPA</option>
+                            <option value="Pilsner">Pilsner</option>
+                            <option value="Stout">Stout</option>
+                            <option value="Saison">Saison</option>
+                        </select>
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button onClick={this.handleFormSubmit}>Submit</Button>
                 </Form>
             </div>
         );
     }
 }
 
-export default addBeers;
+
+export default CreateBeerForm;
