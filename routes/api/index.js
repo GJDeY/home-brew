@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const beerRoutes = require("./beerApi");
+const beerRoutes = require("./beerAPI");
 
 router.use("/beers", beerRoutes);
 
