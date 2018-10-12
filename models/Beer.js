@@ -17,7 +17,7 @@ const BeerSchema = new Schema({
     },
     style: {
         type: String,
-        enum: ['IPA', 'Pilsner', 'Stout', 'Saison'],
+        enum: ['IPA', 'Pilsner', 'Stout', 'Saison', 'Lager', 'Ale', 'Belgian', 'Hefeweizen'],
         required: true
     },
     imageURL: {
