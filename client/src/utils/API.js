@@ -15,7 +15,11 @@ export default {
   },
   deleteBeer: id => {
     return axios.delete("/api/beers" + id)
-  }
 
+  },
+
+  getHBC: hbcAddress => {
+    return axios.get("https://api-ropsten.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0xCF86a1CFD63E26960A61B7F5Cbc521A189E2522f&address=" + hbcAddress + "&tag=latest&apikey=YourApiKeyToken")
+  }
 
 };

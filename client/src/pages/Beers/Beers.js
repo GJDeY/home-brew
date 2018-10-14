@@ -9,12 +9,12 @@ import { resolve } from "url";
 
 class Beers extends React.Component {
     state = {
-        example: "some state!"
+        beers: []
     };
 
     componentDidMount() {
         API.getBeers()
-            .then(res => console.log('checking database connect to the backend ---->', res))
+            .then(res => this.setState({ beers: res.data }))
     }
 
 
@@ -29,6 +29,8 @@ class Beers extends React.Component {
                 <Col>
                     <Cards />
                 </Col>
+
+                <Cards beers={this.state.beers} />
 
             </div>
         );
