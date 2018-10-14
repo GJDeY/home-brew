@@ -15,6 +15,7 @@ class Beers extends React.Component {
     componentDidMount() {
         API.getBeers()
             .then(res => this.setState({ beers: res.data }))
+
     }
 
 
