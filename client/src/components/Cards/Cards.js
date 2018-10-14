@@ -1,13 +1,12 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardDeck, Button, Col, Row } from 'reactstrap';
-// hi luke
+
 
 class Cards extends React.Component {
 
-
-    render() {
-        return (
-            <div className="container-fluid">
+    renderCards = () => {
+        return this.props.beers.map(beer => {
+            return (<div className="container-fluid" style={{ margin: "40px 0px" }}>
                 <Row>
                     <Col md="4" className="flex-wrap" body>
                         <div style={{ margin: '30px' }}>
