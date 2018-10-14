@@ -9,7 +9,6 @@ const Beer = require('../../models/Beer');
 // @access  Public
 router.get('/', (req, res) => {
     Beer.find()
-        .sort({ date: -1 })
         .then(beer => res.json(beer))
 })
 
@@ -18,9 +17,10 @@ router.get('/', (req, res) => {
 // @access  Public
 router.post('/', (req, res) => {
     const newBeer = new Beer({
-        name: req.body.name,
-        style: req.body.style,
+        beerName: req.body.beerName,
+        brewer: req.body.brewer,
         beerNote: req.body.beerNote,
+        style: req.body.style,
         imageURL: req.body.imageURL,
         hbcAddress: req.body.hbcAddress
     });
