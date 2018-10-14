@@ -11,7 +11,7 @@ class Cards extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid" style={{ margin: "40px 0px" }}>
+            <div className="container-fluid">
                 <Row>
                     <Col md="4" className="flex-wrap" body>
                         <div style={{ margin: '30px' }}>
