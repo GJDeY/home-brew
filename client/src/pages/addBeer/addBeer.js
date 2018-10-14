@@ -9,7 +9,11 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 class CreateBeerForm extends Component {
     state = {
         beerName: "",
-        beerStyle: "IPA"
+        brewer: "",
+        beerNote: "",
+        style: "IPA",
+        imageURL: "",
+        hbcAddress: ""
     }
 
 
@@ -20,7 +24,7 @@ class CreateBeerForm extends Component {
     handleFormSubmit = (event) => {
         event.preventDefault();
 
-        API.createBeer({ name: this.state.beerName, style: this.state.beerStyle })
+        API.createBeer({ beerName: this.state.beerName, brewer: this.state.brewer, beerNote: this.state.brewer, style: this.state.beerStyle, imageURL: this.state.imageURL, hbcAddress: this.state.hbcAddress })
             .then(result => {
                 console.log(result)
             }).catch(error => {
@@ -28,7 +32,12 @@ class CreateBeerForm extends Component {
             })
         this.setState({
             beerName: "",
-            beerStyle: "IPA"
+            brewer: "",
+            beerNote: "",
+            style: "IPA",
+            imageURL: "",
+            hbcAddress: ""
+
         })
 
     }
@@ -44,6 +53,14 @@ class CreateBeerForm extends Component {
                         <Input type="text" name="beerName" value={this.state.beerName} id="beerNameID" onChange={this.handleInputChange} />
                     </FormGroup>
                     <FormGroup>
+                        <Label for="brewerID">Brewer Name</Label>
+                        <Input type="text" name="brewer" value={this.state.brewer} id="brewerID" onChange={this.handleInputChange} />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="beerNoteID">Beer Note</Label>
+                        <Input type="text" name="beerNote" value={this.state.beerNote} id="beerNoteID" onChange={this.handleInputChange} />
+                    </FormGroup>
+                    <FormGroup>
                         <Label for="beerStyleID">Beer Style</Label>
                         <select type="select" value={this.state.beerStyle} name="beerStyle" id="beerStyleID" onChange={this.handleInputChange}>
                             <option value="IPA">IPA</option>
@@ -55,6 +72,14 @@ class CreateBeerForm extends Component {
                             <option value="Belgian">Belgian</option>
                             <option value="Hefeweizen">Hefeweizen</option>
                         </select>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="imageURLID">Add a picture of your beer</Label>
+                        <Input type="text" name="imageURL" value={this.state.imageURL} id="imageURLID" onChange={this.handleInputChange} />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="hbcAddressID">Add your ETH Address</Label>
+                        <Input type="text" name="hbcAddress" value={this.state.hbcAddress} id="hbcAddressID" onChange={this.handleInputChange} />
                     </FormGroup>
                     <Button onClick={this.handleFormSubmit}>Submit</Button>
                 </Form>

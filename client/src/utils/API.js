@@ -16,4 +16,6 @@ export default {
   deleteBeer: id => {
     return axios.delete("/api/beers" + id)
   }
+
+
 };
