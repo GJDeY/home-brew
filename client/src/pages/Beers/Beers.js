@@ -22,10 +22,16 @@ class Beers extends React.Component {
         return (
             <div>
                 <Navigation />
-                <Col>
-                    <Button md="12" className="mx-auto" color="dark" href="/addBeer" body>Add A Beer!</Button>
+
+                <Col className="col-1 mx-auto" style={{ margin: "40px 0px" }}>
+                    <Button color="dark" href="/addBeer" body>Add A Beer!</Button>
                 </Col>
+                <Col>
+                    <Cards />
+                </Col>
+
                 <Cards beers={this.state.beers} />
+
             </div>
         );
     }

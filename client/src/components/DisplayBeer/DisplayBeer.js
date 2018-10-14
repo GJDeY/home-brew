@@ -25,10 +25,10 @@ class DisplayBeer extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md="6" className="mx-auto">
+                    <Col className="col-1 mx-auto">
 
-                        <Button color="dark" href="UPDATE ROUTE" body>Update Beer!</Button>
-                        <Button color="dark" href="DELETE ROUTE" body>Delete Beer!</Button>
+                        <Button color="dark" href="UPDATE ROUTE" body style={{ margin: "10px 10px 10px 10px" }}>Update Beer!</Button>
+                        <Button color="dark" href="DELETE ROUTE" body style={{ margin: "10px 10px 10px 10px" }}>Delete Beer!</Button>
                     </Col>
                 </Row>
             </div>

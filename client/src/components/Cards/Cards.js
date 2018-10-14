@@ -4,9 +4,10 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardDeck, B
 
 class Cards extends React.Component {
 
-    renderCards = () => {
-        return this.props.beers.map(beer => {
-            return (<div className="container-fluid" style={{ margin: "40px 0px" }}>
+
+    render() {
+        return (
+            <div className="container-fluid">
                 <Row>
                     <Col md="4" className="flex-wrap" body>
                         <div style={{ margin: '30px' }}>
