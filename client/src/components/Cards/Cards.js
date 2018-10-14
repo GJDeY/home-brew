@@ -10,11 +10,13 @@ class Cards extends React.Component {
                 <Row>
                     <Col md="4" className="flex-wrap" body>
                         <div style={{ margin: '30px' }}>
+
                             <a href="/beerInfo"><CardImg width="100%" className="rounded" src={beer.imageURL} alt="beer" /></a>
                             <CardBody>
                                 <CardTitle>{beer.beerName}</CardTitle>
                                 <CardSubtitle>Card subtitle</CardSubtitle>
                                 <CardText>{beer.beerNote}</CardText>
+
                             </CardBody>
                         </div>
                     </Col>
