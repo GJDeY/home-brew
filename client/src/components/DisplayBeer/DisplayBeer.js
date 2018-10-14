@@ -14,7 +14,7 @@ class DisplayBeer extends React.Component {
             <div style={{ margin: "40px 0px" }}>
                 <Row>
                     <Col md="6" className="mx-auto" body>
-                        <div style={{ margin: '30px' }}>
+                        <div style={{ margin: '30px', color: 'white' }}>
                             <a href="/beerInfo"><CardImg width="100%" className="rounded" src="https://www.gannett-cdn.com/-mm-/89934f7b13e7717eb560f3babda84f20895abcd0/c=83-0-724-482/local/-/media/2018/07/17/DetroitFreeP/DetroitFreePress/636674313628993565-GettyImages-684133728.jpg?width=534&height=401&fit=crop" alt="beer" /></a>
                             <CardBody>
                                 <CardTitle>Card title</CardTitle>

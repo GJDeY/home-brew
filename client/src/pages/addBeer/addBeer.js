@@ -31,7 +31,8 @@ class CreateBeerForm extends Component {
             beerName: this.state.beerName, brewer: this.state.brewer, beerNote: this.state.brewer, style: this.state.style, imageURL: this.state.imageURL, hbcAddress: this.state.hbcAddress
         })
             .then(result => {
-                console.log(result)
+                console.log(result);
+                this.props.history.push('/beers');
             }).catch(error => {
                 console.log(error)
             })
