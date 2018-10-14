@@ -18,13 +18,18 @@ class CreateBeerForm extends Component {
 
 
     handleInputChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value })
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        })
     }
 
     handleFormSubmit = (event) => {
         event.preventDefault();
 
-        API.createBeer({ beerName: this.state.beerName, brewer: this.state.brewer, beerNote: this.state.brewer, style: this.state.beerStyle, imageURL: this.state.imageURL, hbcAddress: this.state.hbcAddress })
+        API.createBeer({
+            beerName: this.state.beerName, brewer: this.state.brewer, beerNote: this.state.brewer, style: this.state.style, imageURL: this.state.imageURL, hbcAddress: this.state.hbcAddress
+        })
             .then(result => {
                 console.log(result)
             }).catch(error => {
@@ -61,8 +66,8 @@ class CreateBeerForm extends Component {
                         <Input type="text" name="beerNote" value={this.state.beerNote} id="beerNoteID" onChange={this.handleInputChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="beerStyleID">Beer Style</Label>
-                        <select type="select" value={this.state.beerStyle} name="beerStyle" id="beerStyleID" onChange={this.handleInputChange}>
+                        <Label for="styleID">Beer Style</Label>
+                        <select type="select" value={this.state.style} name="style" id="styleID" onChange={this.handleInputChange}>
                             <option value="IPA">IPA</option>
                             <option value="Pilsner">Pilsner</option>
                             <option value="Stout">Stout</option>
