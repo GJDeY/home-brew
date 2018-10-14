@@ -56,7 +56,7 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div className="col-3 mx-auto" style={{ margin: "40px 0px" }}>
+                <div className="col-3 mx-auto" style={{ margin: "40px 0px", color: 'white' }}>
                     <h4>Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">

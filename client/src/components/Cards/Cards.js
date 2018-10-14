@@ -12,9 +12,9 @@ class Cards extends React.Component {
                         <div style={{ margin: '30px' }}>
 
                             <a href="/beerInfo"><CardImg width="100%" className="rounded" src={beer.imageURL} alt="beer" /></a>
-                            <CardBody>
+                            <CardBody style={{ color: "white" }}>
                                 <CardTitle>{beer.beerName}</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
+                                <CardSubtitle>{beer.style}</CardSubtitle>
                                 <CardText>{beer.beerNote}</CardText>
 
                             </CardBody>
