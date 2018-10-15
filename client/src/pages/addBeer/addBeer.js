@@ -50,7 +50,7 @@ class CreateBeerForm extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{ color: 'white' }}>
                 <Navigation></Navigation>
                 <Form className="col-4 mx-auto">
                     <FormGroup>
@@ -64,7 +64,7 @@ class CreateBeerForm extends Component {
                     </FormGroup>
                     <FormGroup>
                         <Label for="beerNoteID">Beer Note</Label>
-                        <Input type="text" name="beerNote" value={this.state.beerNote} id="beerNoteID" onChange={this.handleInputChange} />
+                        <Input type="textarea" rows="4" name="beerNote" value={this.state.beerNote} id="beerNoteID" onChange={this.handleInputChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="styleID">Beer Style</Label>
