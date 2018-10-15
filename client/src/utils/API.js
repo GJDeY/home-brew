@@ -14,8 +14,11 @@ export default {
     return axios.get("/api/beers");
   },
   deleteBeer: id => {
-    return axios.delete("/api/beers" + id)
+    return axios.delete("/api/beers/" + id)
 
+  },
+  updateBeer: (id, beerData) => {
+    return axios.put("/api/beers/" + id, beerData)
   },
 
   getHBC: hbcAddress => {
