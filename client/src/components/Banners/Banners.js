@@ -9,7 +9,7 @@ import {
 
 const items = [
     {
-        src: 'https://i1.wp.com/macbournes.com/wp-content/uploads/2017/03/Depositphotos_136054186_original.jpg',
+        src: 'https://i.imgur.com/BuGuxuj.jpg',
         altText: '',
         caption: ''
     },
