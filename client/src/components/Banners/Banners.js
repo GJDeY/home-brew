@@ -9,19 +9,19 @@ import {
 
 const items = [
     {
-        src: 'https://via.placeholder.com/800x340',
-        altText: 'Slide 1',
-        caption: 'Slide 1'
+        src: 'https://i1.wp.com/macbournes.com/wp-content/uploads/2017/03/Depositphotos_136054186_original.jpg',
+        altText: '',
+        caption: ''
     },
     {
-        src: 'https://via.placeholder.com/800x340',
-        altText: 'Slide 2',
-        caption: 'Slide 2'
+        src: 'https://cdn.shopify.com/s/files/1/2084/3549/articles/beer_brewing_equipment.jpeg?v=1515529533',
+        altText: '',
+        caption: ''
     },
     {
-        src: 'https://via.placeholder.com/800x340',
-        altText: 'Slide 3',
-        caption: 'Slide 3'
+        src: 'http://multimedianewsroom.us/wp-content/uploads/2014/12/MG_4049.jpg',
+        altText: '',
+        caption: ''
     }
 ];
 
@@ -66,18 +66,24 @@ class Banners extends Component {
 
         const slides = items.map((item) => {
             return (
+
                 <CarouselItem
                     onExiting={this.onExiting}
                     onExited={this.onExited}
                     key={item.src}
                 >
                     <img src={item.src} alt={item.altText} className={'d-block w-100'} />
+
+
+
+
                     <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
                 </CarouselItem>
             );
         });
 
         return (
+
             <Carousel
                 activeIndex={activeIndex}
                 next={this.next}

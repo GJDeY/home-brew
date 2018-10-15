@@ -12,7 +12,7 @@ class Cards extends React.Component {
                     <Col>
                         <a href="/beerInfo"><CardImg width="100%" className="rounded" src={beer.imageURL} alt="beer" /></a>
                         <CardBody style={{ color: "white" }}>
-                            <CardTitle>{beer.beerName}</CardTitle>
+                            <CardTitle>{beer.beerName} by {beer.brewer}</CardTitle>
                             <CardSubtitle>{beer.style}</CardSubtitle>
                             <CardText>{beer.beerNote}</CardText>
                         </CardBody>
