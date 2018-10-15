@@ -6,30 +6,30 @@ class Cards extends React.Component {
 
     renderCards = () => {
         return this.props.beers.map(beer => {
-            return (<div className="container-fluid" style={{ margin: "40px 0px" }}>
-                <Row>
-                    <Col md="4" className="flex-wrap" body>
-                        <div style={{ margin: '30px' }}>
+            return (
 
-                            <a href="/beerInfo"><CardImg width="100%" className="rounded" src={beer.imageURL} alt="beer" /></a>
-                            <CardBody style={{ color: "white" }}>
-                                <CardTitle>{beer.beerName}</CardTitle>
-                                <CardSubtitle>{beer.style}</CardSubtitle>
-                                <CardText>{beer.beerNote}</CardText>
-
-                            </CardBody>
-                        </div>
+                <div className="col-3">
+                    <Col>
+                        <a href="/beerInfo"><CardImg width="100%" className="rounded" src={beer.imageURL} alt="beer" /></a>
+                        <CardBody style={{ color: "white" }}>
+                            <CardTitle>{beer.beerName}</CardTitle>
+                            <CardSubtitle>{beer.style}</CardSubtitle>
+                            <CardText>{beer.beerNote}</CardText>
+                        </CardBody>
                     </Col>
+                </div>
 
-                </Row>
-            </div>
+
+
             )
         })
     }
     render() {
         return (
-            <div>
-                {this.renderCards()}
+            <div className="container-fluid">
+                <Row>
+                    {this.renderCards()}
+                </Row>
             </div >
         )
 
