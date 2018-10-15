@@ -37,5 +37,16 @@ router.delete('/:id', (req, res) => {
         .catch(err => res.status(404).json({ success: false }))
 })
 
+// @route   put api/items/:id
+// @desc    update an Item
+// @access  Public
+router.put('/:id', (req, res) => {
+    Beer.updateOne({ _id: req.params.id }, req.body, { new: true })
+        .then(() => {
+            res.json({ success: true })
+        })
+        .catch(error => res.status(404).json({ success: false }))
+})
+
 
 module.exports = router;
