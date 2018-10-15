@@ -91,7 +91,7 @@ class SignUpForm extends Component {
                         <div className="form-group ">
                             <div className="col-6"></div>
                             <button
-                                className="btn btn-primary"
+                                className="btn btn-dark"
 
                                 onClick={this.handleSubmit}
                                 type="submit">SignUp</button>
