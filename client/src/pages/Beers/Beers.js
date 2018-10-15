@@ -9,12 +9,48 @@ import { resolve } from "url";
 
 class Beers extends React.Component {
     state = {
-        beers: []
+        beers: [],
+        HBCBalances: []
     };
 
-    componentDidMount() {
+    beersTemp = [];
+
+
+    handleDeleteBeer = id => {
+        API.deleteBeer(id)
+            .then(res => this.getAllBeers())
+            .catch(err => console.log(err));
+    }
+
+    getAllBeers = () => {
         API.getBeers()
-            .then(res => this.setState({ beers: res.data }))
+            .then(res => {
+                this.beersTemp = res.data;
+                return Promise.all(this.beersTemp.map(beer => API.getHBC('0x62c7c0afb1276ef66f664ad8cedced64b4c77ff2')))
+            })
+            .then(hbcs => {
+                let HBCBalances = hbcs.map(hbc => {
+                    console.log(hbc.data.result);
+                    return hbc.data.result;
+                });
+
+                this.setState({
+                    beers: this.beersTemp,
+                    HBCBalances
+                })
+            }).catch(err => {
+                console.log(err);
+            })
+    }
+
+    getHBCAmount = hbcAddress => {
+        API.getHBC(hbcAddress)
+            .then(res => this.setState({ HBCAmount: res.data.result }))
+    }
+
+
+    componentDidMount() {
+        this.getAllBeers();
     }
 
 
@@ -23,13 +59,9 @@ class Beers extends React.Component {
             <div>
                 <Navigation />
                 <Col className="col-1 mx-auto" style={{ margin: "40px 0px" }}>
-                    <Button color="danger" href="/addBeer" body>Add A Beer!</Button>
+                    <Button color="dark" href="/addBeer" body>Add A Beer!</Button>
                 </Col>
-
-                <Col >
-                    <Cards beers={this.state.beers} />
-                </Col>
-
+                <Cards handleDeleteBeer={this.handleDeleteBeer} beers={this.state.beers} />
             </div>
         );
     }
