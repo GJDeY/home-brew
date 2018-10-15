@@ -59,7 +59,7 @@ class Beers extends React.Component {
             <div>
                 <Navigation />
                 <Col className="col-1 mx-auto" style={{ margin: "40px 0px" }}>
-                    <Button color="dark" href="/addBeer" body>Add A Beer!</Button>
+                    <Button color="danger" href="/addBeer" body>Add A Beer!</Button>
                 </Col>
                 <Col>
                     <Cards handleDeleteBeer={this.handleDeleteBeer} beers={this.state.beers} />
