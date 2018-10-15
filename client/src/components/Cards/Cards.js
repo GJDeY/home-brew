@@ -10,7 +10,7 @@ class Cards extends React.Component {
 
     renderCards = () => {
         return this.props.beers.map(beer => {
-            return (<div className="col-3">
+            return (<div className="col-md-4 col-xs-1">
                 <Col>
 
 
@@ -20,9 +20,10 @@ class Cards extends React.Component {
                         <CardSubtitle>{beer.style}</CardSubtitle>
                         <CardText>{beer.beerNote}</CardText>
                         <CardText>{beer.hbcAddress}</CardText>
-                        <Button color="dark" body style={{ margin: "10px 10px 10px 10px" }}>Update Beer!</Button>
-                        <Button onClick={() => this.props.handleDeleteBeer(beer._id)} color="dark" body style={{ margin: "10px 10px 10px 10px" }}>Delete Beer!</Button>
                     </CardBody>
+                    <Button color="dark" body style={{ margin: "10px 10px 10px 10px" }}>Update Beer!</Button>
+                    <Button onClick={() => this.props.handleDeleteBeer(beer._id)} color="dark" body style={{ margin: "10px 10px 10px 10px" }}>Delete Beer!</Button>
+
                 </Col>
 
             </div>
