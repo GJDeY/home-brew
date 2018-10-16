@@ -62,7 +62,8 @@ class Beers extends React.Component {
                     <Button color="danger" href="/addBeer" body>Add A Beer!</Button>
                 </Col>
                 <Col>
-                    <Cards handleDeleteBeer={this.handleDeleteBeer} beers={this.state.beers} />
+                    <Cards handleDeleteBeer={this.handleDeleteBeer} beers={this.state.beers}
+                        HBCs={this.state.HBCBalances} />
                 </Col>
             </div>
         );
