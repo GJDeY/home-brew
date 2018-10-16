@@ -53,7 +53,6 @@ class Beers extends React.Component {
         this.getAllBeers();
     }
 
-
     render() {
         return (
             <div>

@@ -2,10 +2,6 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardDeck, Button, Col, Row } from 'reactstrap';
 import API from "../../utils/API";
 
-
-
-
-
 class Cards extends React.Component {
     renderCards = () => {
         return this.props.beers.map(beer => {
@@ -29,14 +25,6 @@ class Cards extends React.Component {
         })
     }
 
-    renderBalance = () => {
-
-        return this.props.HBCs.map(HBC => {
-            return (<CardText>Test{HBC}</CardText>)
-        })
-    }
-
-
     render() {
         return (
             <div className="container-fluid">
@@ -45,8 +33,6 @@ class Cards extends React.Component {
                 </Row>
             </div >
         )
-
-
     }
 }
 
